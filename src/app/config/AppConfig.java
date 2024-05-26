@@ -1,8 +1,11 @@
 package app.config;
 
 import app.staff.administration.Director;
-import app.staff.administration.Maintanance_supervisor;
-import app.staff.administration.Preschool_education_director;
+import app.staff.administration.MaintananceSupervisor;
+import app.staff.administration.PreschoolEducationDirector;
+import app.staff.sotrudniki.Cooker;
+import app.staff.sotrudniki.Nanny;
+import app.staff.sotrudniki.PreschoolTeacher;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,12 +17,26 @@ public class AppConfig {
         return new Director();
     }
     @Bean
-    public Maintanance_supervisor maintanance_supervisor() {
-        return new Maintanance_supervisor();
+    public MaintananceSupervisor maintanance_supervisor() {
+        return new MaintananceSupervisor();
     }
     @Bean
-    public Preschool_education_director preschool_education_director() {
-        return new Preschool_education_director();
+    public PreschoolEducationDirector preschool_education_director() {
+        return new PreschoolEducationDirector();
     }
-
+    @Bean
+    public Cooker coocker()
+    {
+        return new Cooker();
+    }
+    @Bean
+    public PreschoolTeacher teacher()
+    {
+        return new PreschoolTeacher();
+    }
+    @Bean
+    public Nanny nanny()
+    {
+        return new Nanny();
+    }
 }

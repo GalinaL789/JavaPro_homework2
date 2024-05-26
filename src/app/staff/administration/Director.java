@@ -4,28 +4,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class Director {
     @Autowired
-    private Maintanance_supervisor maintanance_supervisor;
+    private MaintananceSupervisor maintananceSupervisor;
     @Autowired
-    private Preschool_education_director preschool_education_director;
-    public Maintanance_supervisor getMaintanance_supervisor() {
-        return maintanance_supervisor;
+    private PreschoolEducationDirector preschoolEducationDirector;
+    public MaintananceSupervisor getMaintananceSupervisor() {
+        return maintananceSupervisor;
     }
 
-    public Preschool_education_director getPreschool_education_director() {
-        return preschool_education_director;
+    public PreschoolEducationDirector getPreschoolEducationDirector() {
+        return preschoolEducationDirector;
     }
 
-    public void setMaintanance_supervisor(Maintanance_supervisor maintanance_supervisor) {
-        this.maintanance_supervisor = maintanance_supervisor;
+    public void setMaintananceSupervisor(MaintananceSupervisor maintananceSupervisor) {
+        this.maintananceSupervisor = maintananceSupervisor;
     }
 
-    public void setPreschool_education_director(Preschool_education_director preschool_education_director) {
-        this.preschool_education_director = preschool_education_director;
+    public void setPreschoolEducationDirector(PreschoolEducationDirector preschoolEducationDirector) {
+        this.preschoolEducationDirector = preschoolEducationDirector;
     }
     public void manage()
     {
-        maintanance_supervisor.work();
-        preschool_education_director.work();
+        maintananceSupervisor.work();
+        preschoolEducationDirector.work();
     }
 
 }
